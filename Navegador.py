@@ -1,7 +1,7 @@
 class Navegador:
     def __init__(self):
-        self.historial = []  # Pila para el historial
-        self.avance = []     # Pila para el avance (opcional)
+        self.historial = []
+        self.avance = []   
 
     def visitar_pagina(self, url):
         self.historial.append(url)
@@ -9,7 +9,7 @@ class Navegador:
         self.avance.clear()
 
     def retroceder(self):
-        if len(self.historial) > 1:  # Al menos una página anterior
+        if len(self.historial) > 1:  # Retrocede al menos una página anterior
             pagina_actual = self.historial.pop()
             self.avance.append(pagina_actual)
             return self.historial[-1]  # Retorna la página anterior
@@ -74,3 +74,4 @@ def menu():
 
 # Ejecutar el programa
 menu()
+
